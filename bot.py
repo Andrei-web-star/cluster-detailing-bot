@@ -1,3 +1,10 @@
+import os
+
+print("==== DEBUG VARIABLES ====")
+for k, v in os.environ.items():
+    if "TOKEN" in k or "CHAT" in k or "LOGO" in k:
+        print(f"{k} = {v!r}")
+print("==== END DEBUG ====")
 # bot.py
 import os
 import asyncio
