@@ -18,6 +18,9 @@ from aiogram.types import (
 
 # ============== ENV ==============
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise RuntimeError("BOT_TOKEN is not set!")
+    
 LOGO_PATH = os.getenv("LOGO_PATH", "logo.jpg")
 
 # несколько админов через запятую
@@ -28,7 +31,7 @@ ADMIN_CHAT_IDS = [
 ]
 
 # ============== AIOGRAM ==============
-bot = Bot(BOT_TOKEN)   # aiogram 3.x
+bot = Bot(token=BOT_TOKEN)   # aiogram 3.x
 dp = Dispatcher()
 
 # ============== Названия и Цены ==============
