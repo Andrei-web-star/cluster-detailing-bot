@@ -12,7 +12,7 @@ import asyncio
 async def main():
     bot_token = os.getenv("BOT_TOKEN")
     print("========== TEST ENV ==========")
-    print(f"BOT_TOKEN from env: {repr(bot_token)}")
+    print(f"BOT_TOKEN from env: {repr(BOT_TOKEN)}")
     print("==============================")
 
     if not bot_token:
