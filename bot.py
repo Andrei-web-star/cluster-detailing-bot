@@ -1,13 +1,13 @@
 import os
-from aiogram import Bot, Dispatcher
-import asyncio
 
-# Проверяем переменные окружения
-print("==== DEBUG VARIABLES ====")
-for k, v in os.environ.items():
-    if "BOT" in k or "CHAT" in k or "LOGO" in k:
-        print(f"{k} = {v}")
-print("==== END DEBUG ====")
+print("=== DEBUG VARIABLES ===")
+for key, value in os.environ.items():
+    if "BOT" in key or "TOKEN" in key or "CHAT" in key or "LOGO" in key:
+        print(f"{key} = {value}")
+print("=== END DEBUG ===")
+
+import asyncio
+from aiogram import Bot, Dispatcher
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
