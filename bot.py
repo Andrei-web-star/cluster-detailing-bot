@@ -482,6 +482,11 @@ async def contacts(m: Message):
         reply_markup=ikb,
         link_preview_options=LinkPreviewOptions(is_disabled=True)
     )
+      # Добавляем возврат в главное меню
+    main_kb = ReplyKeyboardMarkup(
+        keyboard=[[KeyboardButton(text="🏠 Главное меню")]],
+        resize_keyboard=True
+    )
     await m.answer("Готово. Выберите действие:", reply_markup=main_menu())
 # ============== Запуск ==============
 async def main():
